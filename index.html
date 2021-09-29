@@ -1,47 +1,53 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>database</title>
-</head>
-<body>
-  <form method="post" autocomplete="off" name="google-sheet">
-  	
-         <h1>Registration Form</h1><br>
-         <table>	
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <title>Steve and Dominique</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+   
+  </head>
+  <body>
+    <h1>RSVP FORM</h1>
+    <form method="post" autocomplete="off" name="google-sheet">
+      <div class="row p-2">
+        <div class="col">
+          <input type="text" name="FirstName" required="" class="form-control" placeholder="First name">
+        </div>
+        <div class="col">
+          <input type="text" name="LastName" required="" class="form-control" placeholder="Last name">
+        </div>
+      </div>
+      <div class="row p-2">
+        <div class="col">
+          <input type="number" name="NumberGuest" required="" class="form-control" placeholder="Number of Guest">
+        </div>
+        <div class="col">
+          <input type="number" name="Phone" required="" class="form-control" placeholder="Phone Number">
+        </div>
+      </div>
+      <button type="submit" name="submit" class="btn btn-primary">Submit RSVP</button>
+    </form>
+    <script type="text/javascript">
+
+
+      const scriptURL = 'https://script.google.com/macros/s/AKfycby2b7bn1aY663sOaSUAGxQQvZt0aNJDOR0DwxIzj5EhATA_SgQv/exec'
+              const form = document.forms['google-sheet']
             
-             <tr><td><b>Name : </b></td>
-             <td><input type="text" name="Name"   required="" /></td>
-            </tr>
-            <tr><td><b>Email : </b></td>
-            <td><input type="text" name="Email"   required="" /></td>
-            </tr>
-            <tr><td><b>Phone no. : </b></td>
-            <td><input type="number" name="Phone"   required="" /></td>
-            </tr>
-            <tr><td><b>Gender : </b></td>
-             <td><input type="radio"  name="Gender" value="male" >male
-            <input type="radio"  name="Gender" value="female"  >female<br/></td>
-             </tr>
-           
-         </table>
-         <br><br>
-         <input type="submit" name="submit" value="Submit"/>
-    
-  </form>
-
-  <script type="text/javascript">
-
-
-	  const scriptURL = 'https://script.google.com/macros/s/AKfycby2b7bn1aY663sOaSUAGxQQvZt0aNJDOR0DwxIzj5EhATA_SgQv/exec'
-            const form = document.forms['google-sheet']
-          
-            form.addEventListener('submit', e => {
-              e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("You have successfully submitted."))
-                .catch(error => console.error('Error!', error.message))
-            })
-  </script>
-</body>
+              form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                  .then(response => alert("You have successfully submitted."))
+                  .catch(error => console.error('Error!', error.message))
+              })
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+  
+  </body>
 </html>
