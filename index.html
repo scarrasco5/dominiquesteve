@@ -51,7 +51,7 @@
 	width: 100vw;
 	height: 100vh;
 	background: #080808;
-	overflow: hidden;
+	overflow: visible;
 	background-image: radial-gradient(1px 1px at 5% 98%, #ffffff, #fff0),
 		radial-gradient(1px 1px at 18% 79%, #ffffff, #fff0),
 		radial-gradient(2px 1px at 26% 52%, #ffffff, #fff0),
@@ -116,7 +116,7 @@ body::before {
 	box-shadow: 0 0 10vmax 1vmax #6493a9, 0 0 5vmax 5vmax #adadad80 inset,
 		0 0 2vmax 1vmax #fdfdfd;
 	left: calc(50% - 125vmax);
-	top: 45vmax;
+	top: 85vmax;
 }
 
 .moon:before {
@@ -162,7 +162,7 @@ body::before {
 	z-index: 2;
 	animation: walk-left 20s cubic-bezier(0.05, -0.01, 0.61, 0.99) 0s infinite,
 		walk-up 5s cubic-bezier(0.35, 0.14, 1, 1) 1.5s infinite;
-	margin-top: -10%;
+	margin-top: 50%;
 }
 
 @keyframes walk-left {
@@ -738,11 +738,7 @@ body::before {
 <div class="moon">
   <div class="crater"></div>
 </div>
-<div class="footprints">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+
 <div class="astronaut">
   <div class="backpack"></div>
   <div class="head">
