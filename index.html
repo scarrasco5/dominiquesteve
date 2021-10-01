@@ -903,7 +903,7 @@ body::before {
                 e.preventDefault()
                 fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                   .then(response => alert("You have successfully submitted."))
-                  .then(response => location.assign("index.html"))
+                  .then(response => location.assign("form.html"))
                   .catch(error => console.error('Error!', error.message))
               })
 
