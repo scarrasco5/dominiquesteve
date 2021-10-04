@@ -75,6 +75,35 @@
   background: white;
   position: relative;
 }
+@media (min-width: 350px) {
+  .gallery__strip__wrapper {
+    flex: 0 0 30%;
+
+  }
+   .gallery {
+    height: 100vh;
+  }
+  .gallery__strip.one {
+    animation: 60s move-it ease alternate infinite 0s;
+    transform: translateY(2%);
+  }
+  .gallery__strip.three {
+    animation: 70s move-it ease alternate infinite 0s;
+    transform: translateY(2%);
+  }
+  .gallery__strip.two {
+    animation: 58s move-it-2 ease alternate infinite 0s;
+    transform: translateY(-50%);
+  }
+  .gallery__strip.four {
+    animation: 65s move-it-2 ease alternate infinite 0s;
+    transform: translateY(-50%);
+  }
+  .gallery__strip:hover {
+    animation-play-state: paused;
+  }
+ 
+}
 
 @media (min-width: 500px) {
   .gallery__strip__wrapper {
